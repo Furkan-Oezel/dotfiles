@@ -15,6 +15,9 @@ Plug 'itchyny/lightline.vim'
 " treesitter (highlights code better)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" format code
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 """"""""""""""""""""
 """ end vim-plug """
