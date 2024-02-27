@@ -58,3 +58,6 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 # This tells zsh that small letters will match small and capital letters.
 # (i.e. capital letters match only capital letters.)
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# to use go in every directory.
+export PATH=$PATH:/usr/local/go/bin
