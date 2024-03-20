@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_histfile
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=100000000
+SAVEHIST=100000000
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -26,10 +26,10 @@ zstyle ':completion:*' menu select
 setopt globdots
 
 # prompt
-prompt='%B%F{blue}⟨%f%n%F{blue}∆%fshell%F{blue}⟩——%f%F{blue}⟨%f%~%F{blue}⟩%f %F{blue}⟩⟩⟩%f%b '
+prompt='%B%F{#9c64fe}⟨%f%F{#97e023}%n%f%F{#9c64fe}∆%f%F{#97e023}shell%f%F{#9c64fe}⟩——⟨%f%F{#97e023}%~%f%F{#9c64fe}⟩ ⟩⟩⟩%f%b '
 # prompt='😂 '
 # %B = start (stop) boldface mode
-# %F = start (stop) color mode; blue = 128,0,255 ??
+# %F = start (stop) color mode
 # %n = username
 # %m = hostname
 # %~ = current working directory, $HOME is replaced with '~'
@@ -61,3 +61,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # to use go in every directory.
 export PATH=$PATH:/usr/local/go/bin
+
+# aliases
+alias ls='lsd'
