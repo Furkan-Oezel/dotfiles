@@ -4,7 +4,7 @@
 call plug#begin()
 
 " colorscheme
-Plug 'morhetz/gruvbox'
+Plug 'rose-pine/neovim'
 
 " transparency
 Plug 'tribela/vim-transparent'
@@ -25,7 +25,7 @@ call plug#end()
 """ begin settings """
 """"""""""""""""""""""
 " set colorscheme
-colorscheme gruvbox
+colorscheme rose-pine
 
 " set transparency
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
