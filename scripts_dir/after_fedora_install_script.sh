@@ -16,3 +16,5 @@ sudo cp SourceCodePro/SauceCodeProNerdFontMono-Regular.ttf /usr/share/fonts
 sudo cp SourceCodePro/SauceCodeProNerdFontMono-BoldItalic.ttf /usr/share/fonts
 sudo cp SourceCodePro/SauceCodeProNerdFontMono-Italic.ttf /usr/share/fonts
 sudo cp SourceCodePro/SauceCodeProNerdFontMono-Bold.ttf /usr/share/fonts
+echo '<<<<--------------------------------------->>>>'
+echo 'OK'
