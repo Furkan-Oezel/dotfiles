@@ -1,0 +1,19 @@
+keyboard shortcuts:
+hide all normal windows: navigation -> super+d
+close window: windows -> super+q
+open file manager: custom shortcuts -> name(file manager), command(nautilus), shorcut(super+e)
+open kitty: custom shortcuts -> name(terminal emulator), command(kitty), shortcut(super+enter)
+
+gnome-tweaks:
+make caps lock an additional esc: keyboard -> additional layout options -> caps lock behavior
+center new window: windows -> center new windows
+add max. min. button: windows -> maximize/minimize
+
+disable gnome update notifications:
+sudo dnf install dconf-editor
+go to /org/gnome/software/allow-updates
+
+firefox new tab to the right of the current one:
+type about:config into the address bar
+type curr into the search bar
+set browser.tabs.insertAfterCurrent to true
