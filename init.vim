@@ -22,9 +22,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 " devicons (icons for telescope)
 Plug 'nvim-tree/nvim-web-devicons'
 
-" file system explorer
-Plug 'preservim/nerdtree'
-
 call plug#end()
 """"""""""""""""""""
 """ end vim-plug """
