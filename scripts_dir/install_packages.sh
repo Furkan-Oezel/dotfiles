@@ -1,8 +1,9 @@
 #!/bin/bash
 
+echo -e '\n'
 echo '<<<<--------------------------------------->>>>'
 echo 'installing packages'
 sudo dnf upgrade
-sudo dnf install neovim zsh kitty gnome-tweaks lsd gcc llvm g++ lolcat neofetch cowsay fd-find
+sudo dnf install neovim zsh kitty gnome-tweaks lsd lolcat neofetch cowsay fd-find cmatrix
 echo '<<<<--------------------------------------->>>>'
 echo 'OK'
