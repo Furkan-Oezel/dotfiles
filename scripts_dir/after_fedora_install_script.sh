@@ -1,12 +1,17 @@
 #!/bin/bash
 
+echo -e '\n'
 echo '<<<<--------------------------------------->>>>'
 echo 'setting neovim as default editor for git'
 git config --global core.editor "nvim"
+echo -e '\n'
 
+echo '<<<<--------------------------------------->>>>'
 echo 'switching to zsh'
 chsh -s $(which zsh)
+echo -e '\n'
 
+echo '<<<<--------------------------------------->>>>'
 echo 'installing nerdfonts'
 cd /home/furkan/Downloads
 curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/SourceCodePro.tar.xz

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e '\n'
 echo '<<<<--------------------------------------->>>>'
 echo 'removing default dotfiles if they exist'
 rm -iv ~/.zshrc
@@ -8,15 +9,17 @@ rm -iv ~/.config/nvim/init.vim
 rm -iv ~/.config/kitty/kitty.conf
 rm -iv ~/.config/lsd/config.yaml
 rm -iv ~/.config/lsd/colors.yaml
-echo '<<<<--------------------------------------->>>>'
+echo -e '\n'
 
+echo '<<<<--------------------------------------->>>>'
 echo 'creating directories if they do not exist'
 mkdir ~/.config/nvim
 # mkdir -p ~/.config/Code/User
 mkdir ~/.config/kitty
 mkdir ~/.config/lsd
-echo '<<<<--------------------------------------->>>>'
+echo -e '\n'
 
+echo '<<<<--------------------------------------->>>>'
 echo 'creating symbolic links'
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
