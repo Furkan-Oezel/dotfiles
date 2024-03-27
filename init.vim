@@ -22,6 +22,19 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 " devicons (icons for telescope)
 Plug 'nvim-tree/nvim-web-devicons'
 
+" Uncomment the two plugins below if you want to manage the language servers from neovim
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+" LSP Support
+Plug 'neovim/nvim-lspconfig'
+" Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
+
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+
 call plug#end()
 """"""""""""""""""""
 """ end vim-plug """
@@ -142,6 +155,24 @@ require'nvim-web-devicons'.setup {
   },
  };
 }
+
+local lsp_zero = require('lsp-zero')
+
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
+
+-- to learn how to use mason.nvim with lsp-zero
+-- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
 
 EOF
 """"""""""""""""""""""
