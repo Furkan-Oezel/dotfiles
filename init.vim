@@ -74,6 +74,13 @@ require'nvim-web-devicons'
 
 local lsp_zero = require'lsp-zero'
 lsp_zero.on_attach(function(client, bufnr)
+  -- set up autoformatting on save
+    vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        callback = function()
+            vim.lsp.buf.format()
+        end
+    })
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp_zero.default_keymaps({buffer = bufnr})
