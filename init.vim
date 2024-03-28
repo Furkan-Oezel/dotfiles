@@ -182,7 +182,7 @@ cmp.setup({
   },
   mapping = {
     ['<cr>'] = cmp.mapping.confirm({select = false}),
-    ['<C-e>'] = cmp.mapping.abort(),
+    ['<esc>'] = cmp.mapping.abort(),
     ['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
     ['<Down>'] = cmp.mapping.select_next_item({behavior = 'select'}),
     ['<tab>'] = cmp.mapping.select_next_item({behavior = 'select'}),
