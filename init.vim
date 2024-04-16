@@ -74,16 +74,11 @@ require'nvim-web-devicons'
 
 local lsp_zero = require'lsp-zero'
 lsp_zero.on_attach(function(client, bufnr)
-  -- set up autoformatting on save
-    vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        callback = function()
-            vim.lsp.buf.format()
-        end
-    })
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
+    -- Setup keymap for 'Control + S'
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-s>', '<cmd>write<CR><cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
+
+    -- Setting up default keymaps from lsp-zero
+    lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
 require'mason'.setup({})
