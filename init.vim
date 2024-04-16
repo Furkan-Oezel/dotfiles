@@ -74,9 +74,10 @@ require'nvim-web-devicons'
 
 local lsp_zero = require'lsp-zero'
 lsp_zero.on_attach(function(client, bufnr)
-    -- Setup keymap for 'Control + S'
+    -- save and autoformat file with 'control s'
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-s>', '<cmd>write<CR><cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
-
+    -- go to definition with 'control leftmouse'
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-LeftMouse>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
     -- Setting up default keymaps from lsp-zero
     lsp_zero.default_keymaps({buffer = bufnr})
 end)
